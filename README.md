@@ -17,11 +17,13 @@
 ### 推荐做法
 - 仅在非AngularJS上下文环境下，触发DOM事件时才使用`$apply` 或 `$digest`
 - 使用带函数参数的$apply方法，其内部有错误处理机制并且允许在digest周期内修改
+
 	```javascript
 	$scope.$apply(() => {
 		$scope.tip = 'Javascript Tip';
 	});
 	```
+
   __个人注：经测试，如果使用带参数的$apply方法,则只会更新参数函数里处理的model,貌似没有开启消化周期。__
 - 如果只是要更新当前的scope或它的子scope,使用$digest, 它会防止为整个应用程序开新的digest周期。这种优势不言而喻。
 - $apply()是对机器来说比较有压力，当有大量双向绑定时可能会导致性能问题
