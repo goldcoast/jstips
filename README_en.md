@@ -103,7 +103,7 @@ Here you can find more information about [this](http://www.nicoespeon.com/en/201
 
 ## #02 - ReactJs - Keys in children components are important
 
-> 02/01/2016
+> 02/01/2016  by [@loverajoel](https://twitter.com/loverajoel)
 
 
 The [key](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children) is an attribute that you must pass to all components created dynamically from an array. It's unique and constant id that React use for identify each component in the DOM and know that it's a different component and not the same one. Using keys will ensure that the child component is preserved and not recreated and prevent that weird things happens.
