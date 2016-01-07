@@ -1,5 +1,89 @@
 # TipList 本项目用于翻译Tips
 
+## #03 - Improve Nested Conditionals
+
+> 02/01/2016  by [@AlbertoFuente](https://github.com/AlbertoFuente)
+
+在javascript中，应该怎样改善嵌套的if语句的性能呢？
+
+```javascript
+if (color) {
+  if (color === 'black') {
+    printBlackBackground();
+  } else if (color === 'red') {
+    printRedBackground();
+  } else if (color === 'blue') {
+    printBlueBackground();
+  } else if (color === 'green') {
+    printGreenBackground();
+  } else {
+    printYellowBackground();
+  }
+}
+```
+
+使用switch语句或许是一种改进的方法。但是并不推荐使用，尽管switch方法并不繁琐且能让代码变得有序，原因在于它非常难以调试。
+
+```javascript
+switch(color) {
+  case 'black':
+    printBlackBackground();
+    break;
+  case 'red':
+    printRedBackground();
+    break;
+  case 'blue':
+    printBlueBackground();
+    break;
+  case 'green':
+    printGreenBackground();
+    break;
+  default:
+    printYellowBackground();
+}
+```
+
+但如果我们在每个语句执行时都需要检测几个条件时又该怎么做呢？在上边这个例子中，如果我们想做得稍详细和有序些，可用使用条件开关(conditional switch).当swtich接收的参数为true时，它可以允许在每个case语句块中加入判断语句。
+
+```javascript
+switch(true) {
+  case (typeof color === 'string' && color === 'black'):
+    printBlackBackground();
+    break;
+  case (typeof color === 'string' && color === 'red'):
+    printRedBackground();
+    break;
+  case (typeof color === 'string' && color === 'blue'):
+    printBlueBackground();
+    break;
+  case (typeof color === 'string' && color === 'green'):
+    printGreenBackground();
+    break;
+  case (typeof color === 'string' && color === 'yellow'):
+    printYellowBackground();
+    break;
+}
+```
+
+我们应该尽量避免判断时检测多个条件，尽可能的不使用switch。使用Object的属性是一个更高效的方法。
+
+```javascript
+var colorObj = {
+  'black': printBlackBackground,
+  'red': printRedBackground,
+  'blue': printBlueBackground,
+  'green': printGreenBackground,
+  'yellow': printYellowBackground
+};
+
+if (color && colorObj.hasOwnProperty(color)) {
+  colorObj[color]();
+}
+```
+
+更多详情[点此进入](http://www.nicoespeon.com/en/2015/01/oop-revisited-switch-in-js/)
+
+
 ## #02 - ReactJs - Keys in children components are important
 
 > 02/01/2016  by [@loverajoel](https://twitter.com/loverajoel)
@@ -10,7 +94,7 @@
 > Key 并不是真的关乎性能，更多的是用来标识身份（这反过来将导致更好的性能）。随机分配和不断变化的值都不能做为唯一标识。[Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
 
 - 使用对象已有的唯一值。
-- 在父组件中定义key值，而非子组件。
+- 在父组件中定义key值，而非子组件中。
 
 	```javascript
 	//bad
@@ -23,8 +107,8 @@
 	//good
 	<MyComponent key={{item.key}}/>
 	```
-- [拒绝使用数组索引为key值](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
-- `random()` 无效
+- [不使用数组索引为key值](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318#.76co046o9)
+- 使用`random()`方法将无效
 
 	```javascript
 	//bad
