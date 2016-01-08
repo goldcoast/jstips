@@ -11,7 +11,7 @@ Javascript中array的原生方法[sort](https://developer.mozilla.org/en-US/docs
 // ["Buenos Aires", "Mumbai", "New York", "Shanghai"]
 ```
 
-但是当你要对一个非ASCII字符串排序时，比如 ['é', 'a', 'ú', 'c'], 你会得到一个非常奇怪的结果 ['c', 'e', 'á', 'ú']. 原因在于sort仅适用于英文。
+但是当你要对一个非ASCII字符串排序时，比如 ['é', 'a', 'ú', 'c'], 你会得到一个非常奇怪的结果 ['c', 'e', 'á', 'ú']. 原因在于sort仅适用于英文排序。
 
 来看下面这个例子：
 
@@ -57,7 +57,7 @@ Javascript中array的原生方法[sort](https://developer.mozilla.org/en-US/docs
 - 两个方法都可以设定本地化语言。
 - 据[Firefox文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare#Performance)描述Intl.Collator在处理大量string时性能要更上一筹。
 
-经测试safari目前不支持Intl.Collator()，这两种方法在IE上也需要IE11+才可以。
+附注：据firefox文档这两种方法需要IE11才可以，文档说safarif两种方法都不支持，但经测试safari9.0.1是支持localeCompare的，不支持Intl.Collator()。
 
 
 
