@@ -6,8 +6,8 @@
 
 - `undefined` 变量未被声明 或 已声明但尚未赋值
 - `null` 变量值，意思是没有值
-- Javascript中没赋值的变量默认值为`undefined`
-- Javascript永远不会设置值为`null`, 它是程序员用来声明这个变量没有值。
+- Javascript中没赋值的变量默认为`undefined`
+- Javascript永远不会设置值为`null`, null是程序员用来声明这个变量还没有值。
 - `undefined`在JSON中无效, 但是`null`有效
 - `undefined`的typeof值为`undefined`
 - `null`的typeof值为`object`
