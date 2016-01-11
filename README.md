@@ -49,10 +49,9 @@ function f2() { return "I'm not strict."; }
 - chrome 13+
 - safari 5.1+
 
-参考:
-[Firefox MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)（中文）.
-
-阮一峰写的[Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
+参考:  
+[Firefox MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)（中文）    
+[阮一峰博文 Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)  
 
 
 
