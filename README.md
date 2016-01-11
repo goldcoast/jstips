@@ -2,6 +2,8 @@
 
 ## #07 “use strict” 省心的严格模式
 
+> 07/01/2016 [@nainslie](https://twitter.com/nat5an)
+
 JavaScript的严格模式可以帮开发人员省心的写出更合理也更安全的代码。
 
 在默认情况下，JavaScript的语法非常的宽松。比如，在第一次使用一个变量时并不需要我们使用"var"来做声明。这看上去是方便了没有经验的开发者，但这同时也是导致一些错误的根源，如变量名拼写错误或超出作用域范围。
@@ -10,7 +12,7 @@ JavaScript的严格模式可以帮开发人员省心的写出更合理也更安�
 
 实现代码的严格模式可以将指令写在JS文件的最上面：
 
-```javasript
+```javascript
 // Whole-script strict mode syntax
 "use strict";
 var v = "Hi!  I'm a strict mode script!";
@@ -18,7 +20,7 @@ var v = "Hi!  I'm a strict mode script!";
 
 也可以写在方法内：
 
-```javasript
+```javascript
 function f()
 {
   // Function-level strict mode syntax
@@ -47,11 +49,14 @@ function f2() { return "I'm not strict."; }
 - chrome 13+
 - safari 5.1+
 
-参考 阮一峰写的[Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
+参考:
+[Firefox MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)（中文）.
+
+阮一峰写的[Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
 
 
 
-> 06/01/2016 [@mattfxyz](https://twitter.com/mattfxyz)
+
 
 
 ## #06 一个方法搞定参数值为单个元素或多元素的情况
