@@ -1,5 +1,33 @@
 # TipList 本项目用于翻译Tips
 
+## #08 DOM节点集合转为Array
+
+> 08/01/2016 [@Tevko](https://twitter.com/tevko)
+
+`querySelectorAll`方法返回一个类似于数组的集合，我们称其为节点集合(node list). 这种数据结构被称为“类数组对象”(Array-like), 它们看上去类似数组，只是不能使用map，foreach等数组拥有的方法。下边这个方法可以将节点集合对象转换成一个DOM元素的数组，且此方法高效、安全、又可以重用。
+
+```javascript
+const nodelist = document.querySelectorAll('div');
+const nodelistToArray = Array.apply(null, nodelist);
+
+//later on ..
+
+nodelistToArray.forEach(...);
+nodelistToArray.map(...);
+nodelistToArray.slice(...);
+
+//etc...
+```
+
+代码解读：apply方法用于将数组参数传递并赋值给这个方法，MDN明确标明了apply方法可以接受类数组对象，确切的说也就是`querySelectorAll`方法的返回值。因为在这函数的上下文中不需要给this赋值，所以传null或0就可以。返回值是真正的DOM元素数组，它们可以调用所有可用的数组方法。
+
+
+参考：  
+[NodeList](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList)  
+[apply](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+
+
+
 ## #07 “use strict” 省心的严格模式
 
 > 07/01/2016 [@nainslie](https://twitter.com/nat5an)
