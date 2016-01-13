@@ -19,13 +19,24 @@ nodelistToArray.slice(...);
 //etc...
 ```
 
-代码解读：apply方法用于将数组参数传递并赋值给这个方法，MDN明确标明了apply方法可以接受类数组对象，确切的说也就是`querySelectorAll`方法的返回值。因为在这函数的上下文中不需要给this赋值，所以传null或0就可以。返回值是真正的DOM元素数组，它们可以调用所有可用的数组方法。
+代码解读：apply方法用于将数组参数传递并赋值给这个方法，[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList)明确标明了apply方法可以接受类数组对象，确切的说也就是`querySelectorAll`方法的返回值。因为在这函数的上下文中不需要给this赋值，所以传null或0就可以。返回值是真正的DOM元素数组，它们可以调用所有可用的数组方法。
 
+如果你用的是ES2015那你可以用[展开运算符 ...](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
-参考：  
+```javascript
+const nodelist = [...document.querySelectorAll('div')]; // returns a real Array
+
+//later on ..
+
+nodelist.forEach(...);
+nodelist.map(...);
+nodelist.slice(...);
+
+//etc...
+```
+
+另请参考：  
 [NodeList](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList)  
-[apply](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
-
 
 
 ## #07 “use strict” 省心的严格模式
