@@ -43,6 +43,7 @@ function doTheThing() {
 
 为让代码易于阅读，良好的编码习惯是在作用域的顶部声明所有变量，清楚的标识出变量的作用域范围；使用变量前请先定义好；方法可以定义在底部这样阅读时不容易被干扰，可使代码整洁。
 
+译者注，作用域可以参考[JS秘密花园](https://github.com/BonsaiDen/JavaScript-Garden/blob/master/doc/zh/function/scopes.md#变量声明提升hoisting)中的这篇，写的非常好，推荐阅读。
 
 
 ## #10 对象属性检测
