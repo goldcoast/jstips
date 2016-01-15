@@ -1,5 +1,49 @@
 # TipList 本项目用于翻译Tips
 
+## #11 变量声明提升（Hoisting）
+
+> 11/01/2016 by [@squizzleflip](https://twitter.com/squizzleflip)
+
+理解[变量声明提升（Hoisting）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)有助于我们更好的管理代码的作用域。要记住的是，变量声明和函数定义会被提升到当前作用域的顶部。变量定义不会被提升，即使你是在同一行上声明和定义的。此外，变量声明只是让系统知道有这么个东西存在，而定义是给变量赋值。
+
+```javascript
+function doTheThing() {
+  // 编译出错ReferenceError: notDeclared is not defined
+  console.log(notDeclared);
+
+  // Outputs: undefined
+  console.log(definedLater);
+  var definedLater;
+
+  definedLater = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedLater)
+
+  // Outputs: undefined
+  console.log(definedSimulateneously);
+  var definedSimulateneously = 'I am defined!'
+  // Outputs: 'I am defined!'
+  console.log(definedSimulateneously)
+
+  // Outputs: 'I did it!'
+  doSomethingElse();
+
+  function doSomethingElse(){
+    console.log('I did it!');
+  }
+
+  // TypeError: undefined is not a function
+  functionVar();
+
+  var functionVar = function(){
+    console.log('I did it!');
+  }
+}
+```
+
+为让代码易于阅读，良好的编码习惯是在作用域的顶部声明所有变量，清楚的标识出变量的作用域范围；使用变量前请先定义好；在底部定义好方法to keep them out of your way
+
+
 ## #10 对象属性检测
 
 > 10/01/2016 by [@loverajoel](https://www.twitter.com/loverajoel)
