@@ -4,7 +4,7 @@
 
 > 11/01/2016 by [@squizzleflip](https://twitter.com/squizzleflip)
 
-理解[变量声明提升（Hoisting）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)有助于我们更好的管理代码的作用域。要记住的是，变量声明和函数定义会被提升到当前作用域的顶部。变量定义不会被提升，即使你是在同一行上声明和定义的。此外，变量声明只是让系统知道有这么个东西存在，而定义是给变量赋值。
+理解[变量声明提升（Hoisting）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)有助于我们更好的管理代码的作用域。要记住的是，变量声明和函数定义会被提升到当前作用域的顶部。变量定义不会被提升，即使你是在同一行上声明和定义的。此外，变量*声明*只是让系统知道有这么个东西存在，而*定义*是给变量赋值。
 
 ```javascript
 function doTheThing() {
@@ -41,7 +41,8 @@ function doTheThing() {
 }
 ```
 
-为让代码易于阅读，良好的编码习惯是在作用域的顶部声明所有变量，清楚的标识出变量的作用域范围；使用变量前请先定义好；在底部定义好方法to keep them out of your way
+为让代码易于阅读，良好的编码习惯是在作用域的顶部声明所有变量，清楚的标识出变量的作用域范围；使用变量前请先定义好；方法可以定义在底部这样阅读时不容易被干扰，可使代码整洁。
+
 
 
 ## #10 对象属性检测
