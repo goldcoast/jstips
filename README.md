@@ -1,5 +1,29 @@
 # TipList 本项目用于翻译Tips
 
+## #13 衡量JS语句块性能的建议
+
+为快速即时判断javascript语句块性能，我们可以使用控制台的方法如`console.time(label)`和`console.timeEnd(label)`
+
+```javascript
+console.time('Array initialize');
+var arr = new Array(100),
+    len = arr.length,
+    i;
+
+for (i = 0; i < len; i++){
+  arr[i] = new Object();
+};
+
+console.timeEnd("Array initialize"); // Outputs: Array initialize:0.711ms
+```
+
+更多介绍: [Console object](https://github.com/DeveloperToolsWG/console-object),[Javascript benchmarking](https://mathiasbynens.be/notes/javascript-benchmarking) 
+
+Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/anon/pen/JGJPoa)(outputs in browser console)
+
+> 12/01/2016 by [Avraam Mavridis](https://github.com/AvraamMavridis)
+
+
 ## #12 ES6函数参数的默认值
 
 > 12/01/2016 by [Avraam Mavridis](https://github.com/AvraamMavridis)
