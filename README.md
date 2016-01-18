@@ -2,6 +2,54 @@
 
 ## #13 测量JS语句块性能的建议
 
+> 13/01/2016 by [@pklinger](https://github.com/pklinger/)
+
+作为ES6的一个新功能，胖箭头(fat arrow)函数或许是个让我们码更少的代码来完成更多工作的 便捷工具。这个名字源于其语法符号 =>。胖当然是相较于瘦箭头 -> 而言 :) 。一些同学可能已经知道这类功能是借签于其它几种不同的编程语言，如Haskell的'lambada表达式'它们分别表示各自的'匿名函数'. 之所以称为匿名函数是因为这些箭头函数并没有函数描述名称。
+
+### 优点在哪里？
+
+- 语法层面：代码更简洁（LOC），不用再没完没了的敲'function'了
+- 语义层面：关联当前上下文的this关键字
+
+### 简单的语法示例
+
+下面两段代码功能相同，比较一下，相信你很快就能理解箭头函数的作用。
+
+```javascript
+// general syntax for fat arrow functions
+param => expression
+
+// 也可以写在括号内
+// 使用括号时，在括号内可以写多个参数
+(param1 [, param2]) => expression
+
+
+// using functions
+var arr = [5,3,2,9,1];
+var arrFunc = arr.map(function(x) {
+  return x * x;
+});
+console.log(arr)
+
+// using fat arrow
+var arr = [5,3,2,9,1];
+var arrFunc = arr.map((x) => x*x);
+console.log(arr)
+```
+
+如你所见，箭头函数在这种情况下可节省你敲括号,'function'和'return'等关键字的时间。建议不论什么情况下总是用括号括住参数，因为括号里可以写多个参数，如`(x,y) => x+y`。这种作法可以让我们忽视掉它在不同场景下的写法，尽管上面的代码这样写也可以：`x => x*x`。目前为止我们涉及的都语法层面的东西，它让代码更简洁，更易读。
+
+### Lexically binding this
+
+#todo
+
+译注：  
+LOC: line of code
+
+
+
+## #13 测量JS语句块性能的建议
+
 > 13/01/2016 by [@manmadareddy](https://twitter.com/manmadareddy)
 
 为快速即时判断javascript语句块性能，我们可以使用控制台的方法如`console.time(label)`和`console.timeEnd(label)`
