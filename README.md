@@ -4,7 +4,7 @@
 
 > 15/01/2016 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
-Javascript默认是没有检测是否包含的方法。实际工作中检测一个字符是否包含在一个字符串中，或一个元素是否包含于数组中你可能会这样做：
+Javascript 没有原生的包含检测的方法。在实际编码中检测一个字符是否包含在一个字符串中，或一个元素是否包含于数组中你可能会用下面的做法：
 
 ```javascript
 var someText = 'javascript rules';
@@ -16,7 +16,7 @@ if (someText.indexOf('javascript') >= 0) {
 }
 ```
 
-然而让我们看下[Expressjs](https://github.com/strongloop/express)的代码段是怎么做的吧
+现在，让我们看下[Expressjs](https://github.com/strongloop/express)是怎么做的吧。
 
 [examples/mvc/lib/boot.js](https://github.com/strongloop/express/blob/2f8ac6726fa20ab5b4a05c112c886752868ac8ce/examples/mvc/lib/boot.js#L26)
 
