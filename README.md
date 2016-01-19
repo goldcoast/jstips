@@ -1,10 +1,10 @@
 # TipList 本项目用于翻译Tips
 
-## #15 indexOf检测包含 更简单的方法
+## #15 -  更简易的使用indexOf判断是否包含
 
 > 15/01/2016 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
-Javascript默认是没有检测是否包含的方法。检测一个字符是否在一个字符串中，或一个元素是否包含于数组中你可能会这样做：
+Javascript默认是没有检测是否包含的方法。实际工作中检测一个字符是否包含在一个字符串中，或一个元素是否包含于数组中你可能会这样做：
 
 ```javascript
 var someText = 'javascript rules';
@@ -43,7 +43,7 @@ exports.normalizeType = function(type){
 if (!~apiKeys.indexOf(key)) return next(error(401, 'invalid api key'));
 ```
 
-关键在于[位运算符号](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)~, "按位操作符操作数字的二进制形式，但是返回值依然是标准的JavaScript数值。"
+从上可见关键在于[位运算符号](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)~, "按位操作符操作数字的二进制形式，但是返回值依然是标准的JavaScript数值。"
 
 按位非运算符'~'将 -1 转换为0，而在Javascript中0就是false，所以：
 
@@ -71,14 +71,14 @@ var someText = 'text';
 ```
 
 **不幸的是，支持它的只有Chrome、Firefox、Safari 9及以上版本和Edge。IE11或以前的版本都不支持。**
-**最好是在受控的环境下使用。**
+**所以，最好是在受控的环境下使用它。**
 
 
 
 
 
 
-## #14 ES6的胖箭头函数
+## #14 - ES6的胖箭头函数
 
 > 13/01/2016 by [@pklinger](https://github.com/pklinger/)
 
@@ -180,7 +180,7 @@ LOC: line of code
 
 
 
-## #13 测量JS语句块性能的建议
+## #13 - 测量JS语句块性能的建议
 
 > 13/01/2016 by [@manmadareddy](https://twitter.com/manmadareddy)
 
@@ -205,7 +205,7 @@ Demo: [jsfiddle](https://jsfiddle.net/meottb62/) - [codepen](http://codepen.io/a
 
 
 
-## #12 ES6函数参数的默认值
+## #12 - ES6函数参数的默认值
 
 > 12/01/2016 by [Avraam Mavridis](https://github.com/AvraamMavridis)
 
@@ -227,7 +227,7 @@ getSum( undefined, 10 ) // throws Error, a is not defined
 译注：另参考了 [ECMAScript6入门](http://es6.ruanyifeng.com/#docs/function#函数参数的默认值)
 
 
-## #11 变量声明提升（Hoisting）
+## #11 - 变量声明提升（Hoisting）
 
 > 11/01/2016 by [@squizzleflip](https://twitter.com/squizzleflip)
 
@@ -273,7 +273,7 @@ function doTheThing() {
 译者注，作用域可以参考[JS秘密花园](https://github.com/BonsaiDen/JavaScript-Garden/blob/master/doc/zh/function/scopes.md#变量声明提升hoisting)中的这篇，写的非常好，推荐阅读。
 
 
-## #10 对象属性检测
+## #10 - 对象属性检测
 
 > 10/01/2016 by [@loverajoel](https://www.twitter.com/loverajoel)
 
@@ -325,7 +325,7 @@ user.hasOwnProperty('age'); // false, because age is from the prototype chain
 
 
 
-## #09 模板字符串
+## #09 - 模板字符串
 
 > 09/01/2016 by [@JakeRawr](https://github.com/JakeRawr)
 
@@ -356,7 +356,7 @@ console.log(`My name is ${firstName} ${lastName}`);
 想知道更多关于模板字符串的知识？请看[这里](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2)
 
 
-## #08 DOM节点集合转为Array
+## #08 - DOM节点集合转为Array
 
 > 08/01/2016 [@Tevko](https://twitter.com/tevko)
 
@@ -395,7 +395,7 @@ nodelist.slice(...);
 [NodeList](https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList)  
 
 
-## #07 “use strict” 省心的严格模式
+## #07 - “use strict” 省心的严格模式
 
 > 07/01/2016 [@nainslie](https://twitter.com/nat5an)
 
@@ -453,7 +453,7 @@ function f2() { return "I'm not strict."; }
 
 
 
-## #06 一个方法搞定参数值为单个元素或多元素的情况
+## #06 - 一个方法搞定参数值为单个元素或多元素的情况
 
 > 06/01/2016 [@mattfxyz](https://twitter.com/mattfxyz)
 
@@ -483,7 +483,7 @@ printUpperCase(["cactus", "bear", "potato"]);
 ```
 
 
-## #05 `undefined` 与 `null` 的不同之处
+## #05 - `undefined` 与 `null` 的不同之处
 
 > 05/01/2016 [@loverajoel](https://twitter.com/loverajoel)
 
