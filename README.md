@@ -1,6 +1,6 @@
 # TipList 本项目用于翻译Tips
 
-## #15 -  更简易的使用indexOf判断是否包含
+## #15 - indexOf更简易的一种包含判断用法
 
 > 15/01/2016 by [@jhogoforbroke](https://twitter.com/jhogoforbroke)
 
