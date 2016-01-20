@@ -3,7 +3,7 @@
 纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
-## #15 - 回调传参大法
+## #16 - 回调传参大法
 
 > 16/01/2016 by [@minhazav](https://twitter.com/minhazav)
 
