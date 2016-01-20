@@ -1,5 +1,8 @@
 # TipList 本项目用于翻译Tips
 
+纯属个人爱好，扫码关注微信，每日推送，不定点不定时。
+![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
+
 ## #15 - 回调传参大法
 
 > 16/01/2016 by [@minhazav](https://twitter.com/minhazav)
@@ -42,12 +45,12 @@ document.getElementById('someelem').addEventListener('click', alertText.bind(thi
 ```
 以上两种方法在性能有微小的差别，可在[jspref](http://jsperf.com/bind-vs-closure-23)查看其区别
 
-笔记：
+**笔记**：
 
 - 使用闭包方法时，代码要写在callback方法的return函数内。写在return函数外则不会被触发
 - 使用bind时，方法内不可以用闭包的写法。
 
-参考：
+**参考**：
 [MDN bind用法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
 
