@@ -3,6 +3,28 @@
 纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
+## #17 - Node.js: Run a module if it is not required
+
+> 17/01/2016 by [@odsdq](https://twitter.com/odsdq)
+
+在Node中，可以让你的JS程序根据运行命令的不同而执行不同的动作，比如你可以使用`require('./something.js')`或`node something.js`。当你需要单独与某个模块做交互时，这个技巧非常有用。
+
+```javascript
+if (!module.parent) {
+    // ran with `node something.js`
+    app.listen(8088, function() {
+        console.log('app listening on port 8088');
+    })
+} else {
+    // used with `require('/.something.js')`
+    module.exports = app;
+}
+```
+
+更多信息请查看[modules文档](https://nodejs.org/api/modules.html#modules_module_parent) ([中文API](http://wiki.jikexueyuan.com/project/nodejs/modules.html#e80c310e6ae7ca889532ec40388a497f))
+
+
+
 ## #16 - 回调传参大法
 
 > 16/01/2016 by [@minhazav](https://twitter.com/minhazav)
