@@ -3,7 +3,7 @@
 纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
-## #17 - Node.js: Run a module if it is not required
+## #17 - Node.js: 运行一个模块如果不是用required方式引入的话
 
 > 17/01/2016 by [@odsdq](https://twitter.com/odsdq)
 
