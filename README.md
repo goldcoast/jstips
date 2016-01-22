@@ -3,6 +3,34 @@
 纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
+## #18 数字取整效率最高的方法
+今天的小技巧是关于性能方面的。是否遇到过 `~~` 双波浪运算符？有些时候也被称作双重非位运算符。你可以使用它作为`Math.floor()`的替代方法。为什么？
+
+单个非位运算符`~`将输入值'inputV'转换为-(inputV+1)。故而两个非位运算符会转为-(-(inputV+1)+1), 这就造就了一个极好的舍入整数位的方法。如果输入的是数字，它相当于负数运行`Math.ceil()`和正数执行`Math.floor()`方法。在运算失败,或异常时它返0，这个特性让它总是有机会替代`Math.floor()`方法，因为`Math.floor()`方法在参数为非数字类型时返回NaN。
+
+```javascript
+// single ~
+console.log(~1337)    // -1338
+
+// numeric input 
+console.log(~~47.11)  // -> 47
+console.log(~~-12.88) // -> -12
+console.log(~~1.9999) // -> 1
+console.log(~~3)      // -> 3
+
+// on failure
+console.log(~~[]) // -> 0 
+console.log(~~NaN)  // -> 0
+console.log(~~null) // -> 0
+
+// greater than 32 bit integer fails
+console.log(~~(2147483647 + 1) === (2147483647 + 1)) // -> 0
+```
+
+虽然说`~~`的性能更好些，但为了代码的可读性还是推荐使用`Math.floor()`方法。
+
+
+
 ## #17 - Node.js: 运行一个模块如果不是用required方式引入的话
 
 > 17/01/2016 by [@odsdq](https://twitter.com/odsdq)
