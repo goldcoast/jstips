@@ -27,7 +27,7 @@ var three = '3';
 var result = one + two + three; //"33" instead of "123"
 ```
 
-从性能上讲，使用[连接符号(+)](http://www.sitepoint.com/javascript-fast-string-concatenation/)和使用`concat`基本一。
+从性能上讲，使用[连接符号(+)](http://www.sitepoint.com/javascript-fast-string-concatenation/)和使用`concat`基本相同。
 
 从[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)上可以了解到更多`concat`的资料。
 
