@@ -3,17 +3,14 @@
 纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
-## #21 - 安全的连接字符串方法
+
+
+
+## #20 - 返回对象的函数实现链式调用
 
 > 20/01/2016 by [@WakeskaterX](https://twitter.com/WakeStudio)
 
-
-
-## #20 - 安全的连接字符串方法
-
-> 20/01/2016 by [@WakeskaterX](https://twitter.com/WakeStudio)
-
-当用面向对象的方法创建javascript对象的函数时，函数的返回对象可以将所有函数属性链在一起。
+使用面向对象的方法实现javascript对象时，对象的函数属性的返回值对象可以将所有函数方法链在一起，即可使用链式调用。
 
 ```
 function Person(name) {
