@@ -3,6 +3,40 @@
 纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
+## #21 - 安全的连接字符串方法
+
+> 20/01/2016 by [@WakeskaterX](https://twitter.com/WakeStudio)
+
+
+
+## #20 - 安全的连接字符串方法
+
+> 20/01/2016 by [@WakeskaterX](https://twitter.com/WakeStudio)
+
+当用面向对象的方法创建javascript对象的函数时，函数的返回对象可以将所有函数属性链在一起。
+
+```
+function Person(name) {
+  this.name = name;
+
+  this.sayName = function() {
+    console.log("Hello my name is: ", this.name);
+    return this;
+  };
+
+  this.changeName = function(name) {
+    this.name = name;
+    return this;
+  };
+}
+
+var person = new Person("John");
+person.sayName().changeName("Timmy").sayName();
+```
+
+
+
+
 ## #19 - 安全的连接字符串方法
 
 > 19/01/2016 by [@gogainda](https://twitter.com/gogainda)
