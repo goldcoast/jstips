@@ -3,8 +3,38 @@
 纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
+## #21 数组随机重新排序(洗牌)
 
+> 21/01/2016 by [@0xmtn](https://github.com/0xmtn/)
 
+下面这段代码使用了费希尔-耶茨洗牌(Fisher-Yates Shuffling)算法对数组中元素进行随机排序。
+
+```javascript
+function shuffle(arr) {
+    var i,
+        j,
+        temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+};
+```
+
+演示示例：
+
+```javascript
+var a = [1, 2, 3, 4, 5, 6, 7, 8];
+var b = shuffle(a);
+console.log(b);
+// [2, 7, 8, 6, 5, 3, 1, 4]
+```
+
+**笔记**
+Math.random()返回(0-1)的浮点值伪随机数
 
 ## #20 - 返回对象的函数实现链式调用
 
@@ -12,7 +42,7 @@
 
 使用面向对象的方法实现javascript对象时，对象的函数属性的返回值对象可以将所有函数方法链在一起，即可使用链式调用。
 
-```
+```javascript
 function Person(name) {
   this.name = name;
 
