@@ -11,7 +11,7 @@ categories:
     - en
 ---
 
-## #23 - 转换为number类型的方法
+## #23 - string转换为number
 
 > by [@sonnyt](https://twitter.com/sonnyt)
 
