@@ -1,17 +1,21 @@
 ---
 layout: post
 
-title: Use === instead of ==
+title: 用 === 替换 ==
 tip-number: 24
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster ([jsPref](http://jsperf.com/strictcompare)) than `==`.
+tip-tldr: `==`(或`!=`)操作符在一定情况下会先调用类型转换后再做比较，而`===`(或`!==`)将不执行任何类型转换，直接比较数值和类型，因此比`==`速度更快([jsPref](http://jsperf.com/strictcompare))。
 
 categories:
-    - en
+    - cn
 ---
 
-The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster ([jsPref](http://jsperf.com/strictcompare)) than `==`.
+## #24 - 用 === 替换 ==
+
+> by [@bhaskarmelkani](https://twitter.com/bhaskarmelkani)
+
+`==`(或`!=`)操作符在一定情况下会先调用类型转换后再做比较，而`===`(或`!==`)将不执行任何类型转换，直接比较数值和类型，因此比`==`速度更快([jsPref](http://jsperf.com/strictcompare))。
 
 ```js
 [10] ==  10      // is true
