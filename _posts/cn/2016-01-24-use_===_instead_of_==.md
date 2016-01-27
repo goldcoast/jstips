@@ -5,11 +5,13 @@ title: 用 === 替换 ==
 tip-number: 24
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: `==`(或`!=`)操作符在一定情况下会先调用类型转换后再做比较，而`===`(或`!==`)将不执行任何类型转换，直接比较数值和类型，因此比`==`速度更快([jsPref](http://jsperf.com/strictcompare))。
+tip-tldr: The `==` (or `!=`) operator performs an automatic type conversion if needed. The `===` (or `!==`) operator will not perform any conversion. It compares the value and the type, which could be considered faster ([jsPref](http://jsperf.com/strictcompare)) than `==`.
 
 categories:
     - cn
 ---
+
+
 
 ## #24 - 用 === 替换 ==
 
