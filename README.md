@@ -1,6 +1,6 @@
 # TipList 本项目用于翻译Tips
 
-纯属个人爱好，扫码关注微信，每日推送，不定点不定时。  
+纯属个人爱好，扫码关注微信，每日推送小技巧一篇，方便客官阅读.
 ![header](https://raw.githubusercontent.com/goldcoast/jstips/master/resources/qrcode_wechat.jpg)
 
 
