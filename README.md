@@ -10,7 +10,9 @@
 
 # Tips list
 
-- 25 - [Using immediately invoked function expression](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-25-Using-immediately-invoked-function-expression.md)
+- 27 - [Short circuit evaluation in JS](https://github.com/goldcoast/jstips/blob/master/_posts/en/2016-01-27-short-circiut-evaluation-in-js.md)
+- 26 - [Filtering and Sorting a List of Strings](https://github.com/goldcoast/jstips/blob/master/_posts/en/2016-01-26-filtering-and-sorting-a-list-of-strings.md)
+- 25 - [使用立即执行函数表达式](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-25-Using-immediately-invoked-function-expression.md)
 - 24 - [用 === 替换 ==](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-24-use_%3D%3D%3D_instead_of_%3D%3D.md)
 - 23 - [string转换为number](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-23-converting-to-number-fast-way.md)
 - 22 - [清空数组的两种方法](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-22-two-ways-to-empty-an-array.md)
