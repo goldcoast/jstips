@@ -11,6 +11,11 @@ categories:
     - cn
 ---
 
+## #25 - 使用立即执行函数表达式
+
+> by [@rishantagarwal](https://github.com/rishantagarwal)
+
+
 "Iffy" ( IIFE - immediately invoked function expression) 即立即执行函数表达式, 它在Javascript中有很重要的用途。
 
 ```javascript
