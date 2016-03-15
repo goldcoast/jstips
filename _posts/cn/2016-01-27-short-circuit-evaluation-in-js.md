@@ -5,17 +5,17 @@ title: Short circuit evaluation in JS.JS中的短路求值。
 tip-number: 27
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: Short-circuit evaluation says, the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression, when the first argument of the AND `&&` function evaluates to false, the overall value must be false, and when the first argument of the OR `||` function evaluates to true, the overall value must be true. 短路求值是指，只有当第一个参数不足以确定表达式的值时第二个参数（表达式）才执行或求值。 与运算`&&`的第一个参数表达式为 false 时，整体的值肯定是 false; 或运算`||` 第一个参数表达式为 true 时，整体的值肯定为 true。
+tip-tldr: 短路求值是指，只有当第一个参数不足以确定表达式的值时第二个参数（表达式）才执行或求值。 与运算`&&`的第一个参数表达式为 false 时，整个表达式的值肯定是 false; 或运算`||` 第一个参数表达式为 true 时，整个表达式的值肯定为 true。
 
 
 categories:
     - cn
 ---
 
-[Short-circuit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation) says, the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression: when the first argument of the AND (`&&`) function evaluates to false, the overall value must be false; and when the first argument of the OR (`||`) function evaluates to true, the overall value must be true.
+
 [短路求值](https://en.wikipedia.org/wiki/Short-circuit_evaluation) 是指，只有当第一个参数不足以确定表达式的值时第二个参数（表达式）才执行或求值。 与运算`&&`的第一个参数表达式为 false 时，整体的值肯定是 false; 或运算`||` 第一个参数表达式为 true 时，整体的值肯定为 true。
 
-For the following `test` condition and `isTrue` and `isFalse` function.
+接下来测试 `test` 条件和 `isTrue`、`isFalse`方法。
 
 ```js
 var test = true;
@@ -27,29 +27,29 @@ var isFalse = function(){
 };
 
 ```
-Using logical AND - `&&`.
+使用逻辑与 - `&&`。
 
 ```js
-// A normal if statement.
+// 普通的if语句
 if(test){
-  isTrue();    // Test is true
+  isTrue();    // 测试为 true 的情况
 }
 
-// Above can be done using '&&' as -
+// 上面也可以使用'&&'运算实现
 
-( test && isTrue() );  // Test is true
+( test && isTrue() );  // 测试为 true 的情况
 ```
-Using logical OR - `||`.
+使用逻辑或 - `||`。
 
 ```js
 test = false;
 if(!test){
-  isFalse();    // Test is false.
+  isFalse();    // 测试为 false的情况
 }
 
-( test || isFalse());  // Test is false.
+( test || isFalse());  // 测试为 false的情况
 ```
-The logical OR could also be used to set a default value for function argument.
+逻辑或也可以用来设置函数参数的默认值。
 
 ```js
 function theSameOldFoo(name){ 
@@ -59,9 +59,9 @@ function theSameOldFoo(name){
 theSameOldFoo();  // My best friend's name is Bar
 theSameOldFoo('Bhaskar');  // My best friend's name is Bhaskar
 ```
-The logical AND could be used to avoid exceptions when using properties of undefined.
-Example:
 
+逻辑与可以用来规避读取一个undefined对象属性的异常。
+例如：
 ```js
 var dog = { 
   bark: function(){
@@ -69,13 +69,13 @@ var dog = {
   }
 };
 
-// Calling dog.bark();
+// 调用 dog.bark();
 dog.bark(); // Woof Woof.
 
-// But if dog is not defined, dog.bark() will raise an error "Cannot read property 'bark' of undefined."
-// To prevent this, we can use &&.
+// 但如果dog没有定义，则dog.bark()会抛出一个错误 "Cannot read property 'bark' of undefined."
+// 规避这个错误可以使用 &&
 
-dog&&dog.bark();   // This will only call dog.bark(), if dog is defined.
+dog&&dog.bark();   // 它只在dog定义好了才会执行dog.bark()方法 
 
 ```
 
