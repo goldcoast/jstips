@@ -5,17 +5,16 @@ title: Short circuit evaluation in JS.JS中的短路求值。
 tip-number: 27
 tip-username: bhaskarmelkani
 tip-username-profile: https://www.twitter.com/bhaskarmelkani
-tip-tldr: 短路求值是指，只有当第一个参数不足以确定表达式的值时第二个参数（表达式）才执行或求值。 与运算`&&`的第一个参数表达式为 false 时，整个表达式的值肯定是 false; 或运算`||` 第一个参数表达式为 true 时，整个表达式的值肯定为 true。
-
+tip-tldr: 短路求值是指，只有当第一个参数不足以确定表达式的值时第二个参数（表达式）才执行或求值。 与运算`&&`的第一个参数表达式为 false 时，整体结果肯定是 false; 或运算`||` 第一个参数表达式为 true 时，整体结果肯定为 true。
 
 categories:
     - cn
 ---
 
 
-[短路求值](https://en.wikipedia.org/wiki/Short-circuit_evaluation) 是指，只有当第一个参数不足以确定表达式的值时第二个参数（表达式）才执行或求值。 与运算`&&`的第一个参数表达式为 false 时，整体的值肯定是 false; 或运算`||` 第一个参数表达式为 true 时，整体的值肯定为 true。
+[短路求值](https://en.wikipedia.org/wiki/Short-circuit_evaluation) 是指，只有当第一个参数不足以确定表达式的值时第二个参数（表达式）才执行或求值。 与运算`&&`的第一个参数表达式为 false 时，整体结果肯定是 false; 或运算`||` 第一个参数表达式为 true 时，整体结果肯定为 true。
 
-接下来测试 `test` 条件和 `isTrue`、`isFalse`方法。
+对于下面的 `test` 条件和 `isTrue`、`isFalse`方法
 
 ```js
 var test = true;

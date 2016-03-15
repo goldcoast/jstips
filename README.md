@@ -40,7 +40,7 @@
 - 29 - [Speed up recursive functions with memoization](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-29-speed-up-recursive-functions-with-memoization.md)
 - 28 - [Currying vs partial application](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-28-curry-vs-partial-application.md)
 
-- 27 - [Short circuit evaluation in JS](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-27-short-circiut-evaluation-in-js.md) ([英文](https://github.com/goldcoast/jstips/blob/master/_posts/en/2016-01-27-short-circiut-evaluation-in-js.md)）
+- 27 - [Short circuit evaluation in JS](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-27-short-circiut-evaluation-in-js.md) ([英文](https://github.com/goldcoast/jstips/blob/master/_posts/en/2016-01-27-short-circuit-evaluation-in-js.md)）
 - 26 - [Filtering and Sorting a List of Strings](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-26-filtering-and-sorting-a-list-of-strings.md) ([英文](https://github.com/goldcoast/jstips/blob/master/_posts/en/2016-01-26-filtering-and-sorting-a-list-of-strings.md))
 - 25 - [使用立即执行函数表达式](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-25-Using-immediately-invoked-function-expression.md) ([英文](https://github.com/goldcoast/jstips/blob/master/_posts/en/2016-01-25-Using-immediately-invoked-function-expression.md))
 - 24 - [用 === 替换 ==](https://github.com/goldcoast/jstips/blob/master/_posts/cn/2016-01-24-use_%3D%3D%3D_instead_of_%3D%3D.md) ([英文](https://github.com/goldcoast/jstips/blob/master/_posts/en/2016-01-24-use_%3D%3D%3D_instead_of_%3D%3D.md))
